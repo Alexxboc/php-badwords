@@ -19,4 +19,25 @@ $badWord = $_GET['word'];
 $newSpeech = str_replace($badWord, '***', $speech);
 // Stampo in pagina il nuovo testo e la sua lunghezza
 echo $newSpeech, strlen($newSpeech);
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Words</title>
+</head>
+<body>
+    
+<p><?php echo $speech ?></p>
+
+<strong><?php echo $speechLength ?></strong>
+
+<p><?php echo $newSpeech ?></p>
+
+<strong><?php echo strlen($newSpeech)?></strong>
+</body>
+</html>
